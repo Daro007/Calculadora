@@ -1,0 +1,121 @@
+.grid {
+  display: grid;
+  grid-template-columns:
+    minmax(40px, 200px) minmax(40px, 200px) minmax(40px, 200px)
+    minmax(40px, 200px);
+  grid-template-areas:
+    "header header header header"
+    "sumar restar multiplicar dividir"
+    "input1 operador input2 igual"
+    "footer footer footer2 footer2";
+}
+
+.header {
+  grid-area: header;
+}
+
+.sumar {
+  grid-area: sumar;
+}
+.sumar:hover,
+.restar:hover,
+.multiplicar:hover,
+.dividir:hover,
+.footer2:hover,
+.igual:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+.restar {
+  grid-area: restar;
+}
+.multiplicar {
+  grid-area: multiplicar;
+}
+.dividir {
+  grid-area: dividir;
+}
+
+.input1 {
+  grid-area: input1;
+}
+.operador {
+  grid-area: operador;
+}
+.input2 {
+  grid-area: input2;
+}
+.igual {
+  grid-area: igual;
+}
+
+.footer {
+  grid-area: footer;
+}
+.footer2 {
+  grid-area: footer2;
+}
+
+.grid-item {
+  padding: 1em 1em;
+  border: 2px solid #14080e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #49475b;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* BOTONES */
+input {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Tipografia */
+body {
+  color: #14080e;
+}
+h1 {
+  font-size: 1.5rem;
+}
+.header {
+  background-color: #ffffff;
+}
+
+/* FOOTER */
+.footer {
+  padding: 0em;
+}
+.social-list {
+  display: flex;
+  list-style: none;
+  font-size: 1.2rem;
+  margin: 0em;
+  padding: 0 0.3em;
+}
+.social-link {
+  color: #799496;
+}
+.social-link:hover {
+  opacity: 0.5;
+}
+@media (min-width: 400px) {
+  .grid {
+    margin-left: 35vw;
+    margin-top: 20vh;
+    min-width: 400px;
+    max-width: 500px;
+  }
+  /* TIPOGRAFIA PANTALLA GRANDE */
+  body {
+    font-size: 1.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  input {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+}
